@@ -3,7 +3,7 @@ import cv2
 import rclpy
 from rclpy.node import Node
 
-from sensor_msgs.msg import Image, CompressedImage
+from sensor_msgs.msg import Image
 
 from cv_bridge import CvBridge
 
@@ -19,9 +19,6 @@ class OpenCVDemo(Node):
             10)
         self.pub_img = self.create_publisher(Image,
                                              "/opencv_tests/images", 10)
-        self.pub_compressed_img = self.create_publisher(CompressedImage,
-                                                        "/opencv_tests/images/compressed",
-                                                        10)
         self.cvb = CvBridge()
         self.ball_xv = 10
         self.ball_yv = 10
@@ -30,7 +27,7 @@ class OpenCVDemo(Node):
 
     def listener_callback(self, msg):
         image_input = self.cvb.imgmsg_to_cv2(msg,
-                                             desired_encoding='passthrough')
+                                             desired_encoding='bgr8')
         self.get_logger().info("Got image: %s" % msg.encoding)
 
         cv2.circle(image_input, (self.ball_x, self.ball_y), 10, 255, -1)
@@ -44,7 +41,7 @@ class OpenCVDemo(Node):
 
         out_msg = self.cvb.cv2_to_imgmsg(image_input)
         out_msg.header.frame_id = msg.header.frame_id
-        out_msg.encoding = msg.encoding
+        out_msg.encoding = 'bgr8'
         self.pub_img.publish(out_msg)
 
 
