@@ -21,14 +21,18 @@ cd ~
 git clone https://github.com/Tiryoh/ros2_setup_scripts_ubuntu.git
 ./ros2_setup_scripts_ubuntu/run.sh
 
-### INstall demos
+### Install demos
 mkdir -p ~/demos_ws/src
 cd ~/demos_ws/src
 git clone https://github.com/hdumcke/mini_pupper_ros_demos.git
 cd ~/demos_ws
-rosdep update && rosdep install --from-path src --ignore-src -y --skip-keys microxrcedds_agent --skip-keys micro_ros_agent
 sudo pip install setuptools==58.2.0 # suppress colcon build warning
 colcon build --symlink-install
+
+sudo apt -y install ros-humble-xacro
+sudo apt -y install ros-humble-joint-state-publisher-gui
+sudo apt -y install ros-humble-rviz-imu-plugin
+sudo apt -y install ros-humble-plotjuggler
 
 # Cyclon DDS
 sudo apt install -y ros-humble-rmw-cyclonedds-cpp
