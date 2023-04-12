@@ -1,0 +1,6 @@
+cmd_vel_test:
+  ros__parameters:
+    frequency: 10
+    change_rate: 3
+    duration: 2.0
+    max_velocity: 0.2

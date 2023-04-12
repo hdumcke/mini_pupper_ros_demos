@@ -51,3 +51,17 @@ ros2 run rqt_image_view rqt_image_view
 
 /image_raw shows the image from the camera
 /opencv_tests/images shows the image manipulated by openCV
+
+### cmd_vel test
+
+This is to test basic movements of the robot. 
+
+To visualize cmd_vel
+```sh
+ros2 run plotjuggler plotjuggler
+```
+
+```sh
+source ~/demos_ws/install/setup.bash
+ros2 launch cmd_vel_test test.launch.py
+```
