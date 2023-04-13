@@ -27,6 +27,7 @@ cd ~/demos_ws/src
 git clone https://github.com/hdumcke/mini_pupper_ros_demos.git
 cd ~/demos_ws
 sudo pip install setuptools==58.2.0 # suppress colcon build warning
+source /opt/ros/humble/setup.bash
 colcon build --symlink-install
 
 sudo apt -y install ros-humble-xacro
