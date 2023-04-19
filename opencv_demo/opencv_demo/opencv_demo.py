@@ -11,7 +11,7 @@ from cv_bridge import CvBridge
 class OpenCVDemo(Node):
 
     def __init__(self):
-        super().__init__('line_follower')
+        super().__init__('opencv_demo')
         self.subscription = self.create_subscription(
             Image,
             'image_raw',

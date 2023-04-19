@@ -63,5 +63,5 @@ ros2 run plotjuggler plotjuggler
 
 ```sh
 source ~/demos_ws/install/setup.bash
-ros2 launch cmd_vel_test test.launch.py
+ros2 run cmd_vel_test cmd_vel_test --ros-args -p duration:=10.0
 ```
