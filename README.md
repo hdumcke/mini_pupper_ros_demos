@@ -65,3 +65,15 @@ ros2 run plotjuggler plotjuggler
 source ~/demos_ws/install/setup.bash
 ros2 run cmd_vel_test cmd_vel_test --ros-args -p duration:=10.0
 ```
+
+### SLAM test
+
+```sh
+source ~/demos_ws/install/setup.bash
+ros2 launch mini_pupper_navigation slam.launch.py
+```
+
+```sh
+source ~/demos_ws/install/setup.bash
+ros2 launch mini_pupper_viewers slam_viewer.launch.py
+```

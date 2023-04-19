@@ -34,6 +34,7 @@ sudo apt -y install ros-humble-xacro
 sudo apt -y install ros-humble-joint-state-publisher-gui
 sudo apt -y install ros-humble-rviz-imu-plugin
 sudo apt -y install ros-humble-plotjuggler
+sudo apt -y install ros-humble-nav2-bringup
 
 # Cyclon DDS
 sudo apt install -y ros-humble-rmw-cyclonedds-cpp
