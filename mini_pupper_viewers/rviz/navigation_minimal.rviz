@@ -71,7 +71,7 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_footprint:
+        base_link:
           Value: true
         base_link:
           Value: false
