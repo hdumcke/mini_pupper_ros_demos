@@ -14,7 +14,7 @@ def generate_launch_description():
                name='ekf_filter_node',
                output='screen',
                parameters=[conf_file],
-               remappings=[("imu", "imu/raw_data")]
+               remappings=[("imu", "imu/data")]
                )
 
     return launch.LaunchDescription([loc])
