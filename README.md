@@ -58,6 +58,7 @@ This is to test basic movements of the robot.
 
 To visualize cmd_vel
 ```sh
+sudo apt install -y ros-humble-plotjuggler-ros
 ros2 run plotjuggler plotjuggler
 ```
 
